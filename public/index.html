@@ -2940,7 +2940,7 @@ async function syncWithDatabase(){
     const controller = new AbortController();
     const tid = setTimeout(() => controller.abort(), 5000);
     const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
-    const base = isLocal ? '/api' : 'http://localhost:3001/api';
+    const base = isLocal ? '/api' : 'https://pharmtrack-qsne.onrender.com/api';
     const healthUrl = base + '/health';
     console.log('[SYNC] Trying health URL:', healthUrl);
     const res = await fetch(healthUrl, {method:'GET', headers:{'Accept':'application/json'}, signal: controller.signal});
