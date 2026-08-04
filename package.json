@@ -1,0 +1,38 @@
+{
+  "name": "pharmtrack-ims",
+  "version": "1.0.0",
+  "private": true,
+  "main": "main.js",
+  "scripts": {
+    "start": "node server.js",
+    "app": "electron .",
+    "dist:win": "electron-builder --win"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^4.22.2",
+    "mongodb": "^6.21.0"
+  },
+  "devDependencies": {
+    "electron": "^43.2.0",
+    "electron-builder": "^26.15.3"
+  },
+  "build": {
+    "appId": "com.pharmtrack.ims",
+    "productName": "PharmTrack",
+    "files": [
+      "**/*",
+      "!node_modules/electron",
+      "!node_modules/electron-builder"
+    ],
+    "win": {
+      "target": "nsis"
+    }
+  },
+  "description": "PharmTrack Inventory Management System Desktop Application",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
