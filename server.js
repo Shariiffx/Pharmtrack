@@ -75,6 +75,8 @@ function normalizeDrug(drug) {
   if (norm.category_name !== undefined) norm.category = norm.category_name;
   if (norm.category !== undefined) norm.category_name = norm.category;
   
+  if (norm.p !== undefined) norm.p = parseInt(norm.p) || 10;
+  
   return norm;
 }
 
